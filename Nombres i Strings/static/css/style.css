@@ -1,0 +1,9 @@
+html {
+    /* Anchura de la página */
+    width: 1366px;
+    /* Añado margen a la izquierda y derecha */
+    margin: 0 auto;
+    /* Fuente de la letra y el tamaño de la misma */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
