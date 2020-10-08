@@ -7,3 +7,19 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
 }
+
+.header {
+    height: 120px;
+    padding-top: 5px;
+    background-color: #236AB9;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    color: #341C09;
+}
+
+.header h2 {
+    color: #FC7307;
+}
