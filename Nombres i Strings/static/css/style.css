@@ -9,6 +9,7 @@ html {
 }
 
 .header {
+    width: 1366px;
     height: 120px;
     padding-top: 5px;
     background-color: #236AB9;
