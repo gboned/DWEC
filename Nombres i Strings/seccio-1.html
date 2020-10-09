@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
+    <!-- Añado la cabecera de la página -->
     <div class="header">
         <h1>Secció 1</h1>
         <h2>Nombres i Strings</h2>
     </div>
 
+    <!-- Añado un contenedor con el texto, el recuadro para introducir 
+        texto, el espacio donde saldrá el resultado y los diferentes 
+        botones para diferenciar cada ejercicio -->
     <div class="inputAndResult">
         <p>Introdueix el nombre o string desitjat, i <br>
             selecciona un dels botons de la llista per <br>
@@ -20,14 +24,18 @@
             damunt de cada botó, pots veure una breu <br>
             descripció sobre la seva funció.</p>
         <form>
+            <!-- Introduzco un texto antes del recuadro para introducir texto -->
             <label for="writeText">Introdueix text o nombre:</label> <br>
             <input type="text" id="writeText" name="writeText">
         </form>
         <div class="results">
             <h3>Resultat:</h3>
+            <!-- Añado una id al espacio donde se añadirá el resultado de cada ejercicio -->
             <p id="textResult"></p>
         </div>
         <div class="buttons">
+            <!-- Les añado un texto explicativo que aparece al poner el ratón encima de cada botón, y una id personal
+                a cada botón para trabajar con ellos desde el fichero JS -->
             <button id="button1" type="button" title="Indica si un nombre és positiu, negatiu o igual a 0">01_Nombre signe</button>
             <button id="button2" type="button" title="Indica si el que s'introdueix és un nombre">02_Es nombre</button>
             <button id="button3" type="button" title="Mostra només la part sencera d'un nombre real">03_Nombre part entera</button>
