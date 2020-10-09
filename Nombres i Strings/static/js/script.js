@@ -24,3 +24,22 @@ function clickButton1() {
         textoResultado.innerText = "Has d'escriure un nombre per veure el resultat";
     }
 }
+
+/**
+ * Al darle click al botón 2, se intentará convertir lo que se
+ * ha introducido en un número, se comprueba si el tipo de este
+ * carácter es un número o no es un NaN, y de ser así, en el resultado
+ * se indica que es un número, de lo contrario, se indica que no es un
+ * número
+ */
+function clickButton2() {
+    var contenidoTextoANumero = parseInt(contenidoTexto.value);
+
+    if (typeof contenidoTextoANumero == 'number' && !isNaN(contenidoTexto.value)) {
+
+        textoResultado.innerText = "El que has introduït és un nombre";
+    } else {
+
+        textoResultado.innerText = "El que has introduït no és un nombre";
+    }
+}
