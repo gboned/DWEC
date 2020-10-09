@@ -24,3 +24,45 @@ html {
 .header h2 {
     color: #FC7307;
 }
+
+.inputAndResult {
+    background-color: #D4E4F7;
+    position: absolute;
+    top: 133px;
+    bottom: 0px;
+    width: 1366px;
+    z-index: -1;
+}
+
+.inputAndResult p {
+    padding-top: 40px;
+    padding-right: 470px;
+    font-style: italic;
+    width: 351px;
+    float: right;
+    margin: 0px;
+}
+
+.inputAndResult form {
+    padding-left: 587px;
+    width: min-content;
+    padding-top: 165px;
+}
+
+.results {
+    float: right;
+    padding-top: 23px;
+}
+
+.buttons {
+    width: 14%;
+    position: absolute;
+    top: 36px;
+    left: 57px;
+}
+
+.buttons button {
+    margin: 10px;
+    height: 30px;
+    width: 100%;
+}
