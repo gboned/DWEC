@@ -9,59 +9,79 @@ html {
 }
 
 .header {
+    /* Añado la anchura, altura, el padding superior */
     width: 1366px;
     height: 120px;
     padding-top: 5px;
+    /* Modifico el color de fondo, la alineación del texto y el color del mismo */
     background-color: #236AB9;
     text-align: center;
     color: white;
 }
 
 .header h1 {
+    /* Le doy un color al texto más grande del encabezado */
     color: #341C09;
 }
 
 .header h2 {
+    /* Le asigno otro color al segundo texto del encabezado */
     color: #FC7307;
 }
 
 .inputAndResult {
+    /* Le asigno un color diferente de fondo que el del encabezado */
     background-color: #D4E4F7;
+    /* Hago que su posición sea absoluta para que se coloque correctamente */
     position: absolute;
+    /* Por el tipo de posición, puedo modificar libremente elementos del top y bottom */
     top: 133px;
     bottom: 0px;
+    /* Indico la anchura del div */
     width: 1366px;
+    /* Sitúo el div por debajo de los demás, porque sino ocultaba la cabecera */
     z-index: -1;
 }
 
 .inputAndResult p {
+    /* Añado el padding encima y a la derecha */
     padding-top: 40px;
     padding-right: 470px;
+    /* Añado el estilo de la letra, en cursiva */
     font-style: italic;
+    /* Indico la anchura del parágrafo */
     width: 351px;
+    /* Hago que el elemento flote a la derecha, y le asigno un margen 0 */
     float: right;
     margin: 0px;
 }
 
 .inputAndResult form {
+    /* Añado el padding izquierdo, anchura y padding de encima del elemento del formulario */
     padding-left: 587px;
     width: min-content;
     padding-top: 165px;
 }
 
 .results {
+    /* Hago que el div que contiene la palabra "resultat" y el propio div donde irá el mismo
+        flote a la derecha y tenga un padding encima */
     float: right;
     padding-top: 23px;
 }
 
 .buttons {
+    /* Indico la anchura del div que contiene todos los botones */
     width: 14%;
+    /* Hago que tenga posición absoluta */
     position: absolute;
+    /* Defino la posición del div respecto a la página con top y left */
     top: 36px;
     left: 57px;
 }
 
 .buttons button {
+    /* Modifico de los propios botones el margen, la altura y su anchura */
     margin: 10px;
     height: 30px;
     width: 100%;
