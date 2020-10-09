@@ -1,6 +1,6 @@
 // Creo dos variables globales
-// Esta variable obtiene el valor de lo que se introduce dentro del recuadro
-var contenidoTexto = document.getElementsByTagName("input")[0].value;
+// Esta variable apunta hacia el input
+var contenidoTexto = document.getElementsByTagName("input")[0];
 // Esta variable apunta al div donde se escribirá el resultado
 var textoResultado = document.getElementById("textResult");
 
@@ -11,8 +11,9 @@ var textoResultado = document.getElementById("textResult");
  * indicará que hace falta introducir un número
  */
 function clickButton1() {
-    var contenidoTextoANumero = parseInt(contenidoTexto);
-
+    var contenidoTextoANumero = parseInt(contenidoTexto.value);
+    console.log(contenidoTexto);
+    console.log(contenidoTextoANumero);
     if (contenidoTextoANumero > 0) {
         textoResultado.innerText = "El nombre és positiu";
     } else if (contenidoTextoANumero < 0) {
