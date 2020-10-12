@@ -43,3 +43,22 @@ function clickButton2() {
         textoResultado.innerText = "El que has introduït no és un nombre";
     }
 }
+
+/**
+ * Al darle click al botón 2, se intentará convertir lo que se
+ * ha introducido en un número, se comprueba si el tipo de este
+ * carácter es un número y no es un Nan, y de ser así, en el resultado
+ * se muestra solo la parte entera, en caso de tener decimales
+ */
+function clickButton3() {
+    var contenidoTextoANumero = parseInt(contenidoTexto.value);
+
+    
+    if (typeof contenidoTextoANumero == 'number' && !isNaN(contenidoTexto.value)) {
+        
+        textoResultado.innerText = contenidoTextoANumero;
+    } else {
+
+        textoResultado.innerText = "Has d'introduïr un nombre per veure el resultat"
+    }
+}
