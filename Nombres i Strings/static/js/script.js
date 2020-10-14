@@ -59,6 +59,32 @@ function clickButton3() {
         textoResultado.innerText = contenidoTextoANumero;
     } else {
 
-        textoResultado.innerText = "Has d'introduïr un nombre per veure el resultat"
+        textoResultado.innerText = "Has d'introduïr un nombre per veure el resultat";
+    }
+}
+
+/**
+ * Al darle click al botón 4, se convierte a String lo que se introduce
+ * dentro del recuadro para poder trabajar con el método "split". Añado
+ * cuál es el separador del número de sus decimales, y uso eso como 
+ * referencia para dividir la String en dos partes y guardarlas como
+ * una array. Para obtener la parte decimal, hago un parse a números
+ * del elemento "1" de la array que creé antes. Compruebo que lo que se
+ * obtiene es un número y no es un tipo "NaN", para que se devuelvan los
+ * decimales como respuesta. De lo contrario, se devuelve un mensaje que pide
+ * que se introduzca un número
+ */
+function clickButton4() {
+    var contenidoTextoAString = JSON.stringify(contenidoTexto.value);
+    var separador = '.';
+    var dividirDecimales = contenidoTextoAString.split(separador);
+    var obtenerDecimales = parseInt(dividirDecimales[1]);
+
+    if (typeof obtenerDecimales === 'number' && !isNaN(contenidoTexto.value)) {
+        
+        textoResultado.innerText = obtenerDecimales;
+    } else {
+
+        textoResultado.innerText = "Has d'introduïr un nombre per veure el resultat";
     }
 }
