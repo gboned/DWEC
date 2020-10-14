@@ -110,3 +110,22 @@ function clickButton5() {
         textoResultado.innerText = "Has d'introduïr un nombre per veure el resultat";
     }
 }
+
+/**
+ * Al darle click al botón 6, se eliminan los espacios en blanco
+ * de la String introducida, y en caso de que la longitud de la
+ * variable donde se guarda el resultado de lo mismo, da de longitud 0,
+ * se devuelve como resultado que es una String vacía, de lo contrario
+ * se devuelve que no es una String vacía
+ */
+function clickButton6() {
+    var eliminarEspaciosBlancos = contenidoTexto.value.trim();
+
+    if (eliminarEspaciosBlancos.length === 0) {
+
+        textoResultado.innerText = "El String és buid";
+    } else {
+        
+        textoResultado.innerText = "El String no és buid";
+    }
+}
