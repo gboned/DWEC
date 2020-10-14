@@ -88,3 +88,25 @@ function clickButton4() {
         textoResultado.innerText = "Has d'introduïr un nombre per veure el resultat";
     }
 }
+
+/**
+ * Al darle click al botón 5, lo primero que hace es convertir el contenido
+ * del recuadro en un número y lo guardo en una variable, creo otra variable
+ * que guarde el resultado de dividir el número entre 19. En caso de que el
+ * tipo resultante sea de tipo número o no un NaN, hago que en el resultado se
+ * escriba el número resultante de la división, y que lo haga con los 3 primeros
+ * decimales, mediante el método toFixed(). En caso de no ser de tipo número
+ * o ser un NaN, indico con un mensaje que tiene que introducir un número
+ */
+function clickButton5() {
+    var contenidoTextoANumero = parseInt(contenidoTexto.value);
+    var division = contenidoTextoANumero/19
+
+    if (typeof division === 'number' && !isNaN(contenidoTexto.value)) {
+        
+        textoResultado.innerText = division.toFixed(3);
+    } else {
+
+        textoResultado.innerText = "Has d'introduïr un nombre per veure el resultat";
+    }
+}
