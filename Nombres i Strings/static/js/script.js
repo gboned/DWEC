@@ -129,3 +129,22 @@ function clickButton6() {
         textoResultado.innerText = "El String no és buid";
     }
 }
+
+/**
+ * Al darle click al botón 7, se guarda el valor del contenido
+ * del texto ingresado en una variable, se recorre la longitud
+ * de este texto, y se van guardando cada una de las letras del
+ * mismo en una array. Después se gira esta misma array, se convierte
+ * a String de nuevo, y se devuelve en el contenedor del resultado, la
+ * string del revés.
+ */
+function clickButton7() {
+    var contenidoTextoValor = contenidoTexto.value;
+    var letrasString = [];
+    for (i = 0; i < contenidoTextoValor.length; i++) {
+        letrasString.push(contenidoTextoValor.charAt(i));
+    }
+    letrasString.reverse();
+    var letrasString = letrasString.toString();
+    textoResultado.innerText = letrasString.replaceAll(",", "");
+}
