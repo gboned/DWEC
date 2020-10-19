@@ -326,3 +326,35 @@ function clickButton16() {
 
     textoResultado.innerText = nuevaString.toUpperCase();
 }
+
+/**
+ * Al darle click al botón 17, guardo el valor del texto introducido
+ * en una variable, después obtengo la posición de la primera arroba
+ * y la posible sergunda (para comprobar que solo hay una más adelante).
+ * A continuación, guardo en otra variable el resultado de dividir la
+ * String en dos arrays, dividiéndolas a partir de la '@', y en la última
+ * variable guardo la segunda array, convertida en String. Si la posición
+ * de la primera arroba y la última es el mismo (para comprobar que solo
+ * hay una), y es diferente a -1 (que indica que no existe ninguna arroba),
+ * y si el texto de la segunda array termina en '.net', '.org' o '.com',
+ * entonces el correo electrónico es válido, en caso contrario, no lo es.
+ * Se devuelve el resultado en el contenedor indicado
+ */
+function clickButton17() {
+    var contenidoTextoValor = contenidoTexto.value;
+
+    var primeraArroba = contenidoTextoValor.indexOf('@');
+    var ultimaArroba = contenidoTextoValor.lastIndexOf('@');
+
+    var dividirTextoArroba = contenidoTextoValor.split('@'); 
+    var textoExtension = dividirTextoArroba[1].toString();
+
+    if (primeraArroba == ultimaArroba && primeraArroba != -1) {
+        if (textoExtension.indexOf('.') != -1 && textoExtension.endsWith('.net') || textoExtension.endsWith('.org') || textoExtension.endsWith('.com')) {
+            textoResultado.innerText = 'La direcció de correu introduïda és vàlida';
+        } else {
+            textoResultado.innerText = 'La direcció de correu introduïda no és vàlida';
+        }
+    } 
+
+}
