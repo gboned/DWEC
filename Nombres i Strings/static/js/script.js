@@ -185,3 +185,24 @@ function clickButton9() {
         textoResultado.innerText = "No hi ha cap 'a' dins del text introduït";
     }  
 }
+
+/**
+ * Al darle click al botón 10, se guarda en dos variables la posición de la primera
+ * y de la última 'a' dentro del texto introducido. En caso de que las dos posiciones
+ * sean iguales, y ninguna de las dos sea igual a -1, el resultado será la posición
+ * de la primera 'a'. Si ninguna de las dos es igual a -1, dará las posiciones de
+ * ambas 'a'. Si no se cumple nada de lo anterior, el resultado será que no hay ninguna
+ * 'a' dentro del texto introducido
+ */
+function clickButton10() {
+    var posicionPrimeraA = contenidoTexto.value.indexOf('a');
+    var posicionUltimaA = contenidoTexto.value.lastIndexOf('a');
+
+    if (posicionPrimeraA == posicionUltimaA && posicionPrimeraA != -1 && posicionUltimaA != -1) {
+        textoResultado.innerText = `Només hi ha una 'a' a la posició: ${posicionPrimeraA}`;
+    } else if (posicionPrimeraA != -1 && posicionUltimaA != -1) {
+        textoResultado.innerText = `Posició de la primera 'a': ${posicionPrimeraA} \n Posició de l'última 'a': ${posicionUltimaA}`;
+    } else {
+        textoResultado.innerText = "No hi ha cap 'a' dins del text introduït";
+    }
+}
