@@ -206,3 +206,21 @@ function clickButton10() {
         textoResultado.innerText = "No hi ha cap 'a' dins del text introduït";
     }
 }
+
+/**
+ * Al darle click al botón 11, se guarda en una variable el resultado
+ * de reemplazar 'la' (también las que incluyen algún carácter o ambos 
+ * en mayúscula) por una String vacía. Si al buscar esta String dentro
+ * del texto introducido, sale un resultado diferente a -1, se sustituyen
+ * la o las ocurrencias de dicha String, en el caso contrario, se indica
+ * que no hay ninguna ocurrencia dentro del texto introducido
+ */
+function clickButton11() {
+    var remplazaLa = contenidoTexto.value.replace(/la/gi, '');
+
+    if (contenidoTexto.value.search(/la/gi) != -1) {
+        textoResultado.innerText = remplazaLa;
+    } else {
+        textoResultado.innerText = "No hi ha cap ocurrència de 'la' dins del text introduït";
+    }
+}
