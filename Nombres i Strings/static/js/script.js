@@ -251,3 +251,22 @@ function clickButton13() {
 
     textoResultado.innerText = contenidoTextoValor.replace(contenidoTextoValor, `${primeraLetraContenido}` + contenidoTextoValor + `${primeraLetraContenido}`);
 }
+
+/**
+ * Al darle click al botón 14, se guarda en una variable el valor del
+ * texto introducido, y se crea una String vacía. Se recorre el contenido
+ * del texto, y si lo que se encuentra NO es un espacio en blanco, se añade
+ * el carácter a la String vacía creada anteriormente, la cual se devuelve 
+ * como resultado
+ */
+function clickButton14() {
+    var contenidoTextoValor = contenidoTexto.value;
+    var nuevaString = '';
+
+    for (i = 0; i < contenidoTextoValor.length; i++) {
+        if (contenidoTextoValor.charAt(i) != ' ') {
+        nuevaString += contenidoTextoValor.charAt(i);
+    }
+    }
+    textoResultado.innerText = nuevaString;
+}
