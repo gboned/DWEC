@@ -238,3 +238,16 @@ function clickButton12() {
         textoResultado.innerText = "No hi ha cap ocurrència de 'la' dins del text introduït";
     }
 }
+
+/**
+ * Al darle click al botón 13, se añade en una variable el valor del texto
+ * introducido, y en otra la primera letra de dicho contenido, y se devuelve
+ * el resultado de reemplazar el texto introducido, por el mismo texto, pero
+ * añadiendo la primera letra de este al principio y al final
+ */
+function clickButton13() {
+    var contenidoTextoValor = contenidoTexto.value;
+    var primeraLetraContenido = contenidoTextoValor[0];
+
+    textoResultado.innerText = contenidoTextoValor.replace(contenidoTextoValor, `${primeraLetraContenido}` + contenidoTextoValor + `${primeraLetraContenido}`);
+}
