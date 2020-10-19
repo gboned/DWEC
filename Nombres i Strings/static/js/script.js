@@ -148,3 +148,22 @@ function clickButton7() {
     var letrasString = letrasString.toString();
     textoResultado.innerText = letrasString.replaceAll(",", "");
 }
+
+/**
+ * Al darle click al botón 8, se inicia un contador a 0, y con
+ * un bucle se recorre toda la longitud del texto introducido,
+ * si dentro de este texto se encuentran 'a', se va sumando 1
+ * al contador anterior, y continuando hasta que se llega al
+ * final de la String y se devuelve en el resultado el número
+ * de 'a' que hay en el texto
+ */
+function clickButton8() {
+    var contadorA = 0;
+    for (i = 0; i < contenidoTexto.value.length; i++) {
+        if (contenidoTexto.value.charAt(i) === 'a') {
+            contadorA += 1;
+            continue;
+        }
+    }
+    textoResultado.innerText = `Hi ha ${contadorA} 'a' dins del text introduït`;
+}
