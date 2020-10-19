@@ -167,3 +167,21 @@ function clickButton8() {
     }
     textoResultado.innerText = `Hi ha ${contadorA} 'a' dins del text introduït`;
 }
+
+/**
+ * Al darle click al botón 9, se guarda en una variable la posición de
+ * la posible 'a' que puede hacer dentro del texto introducido, en caso
+ * de que el resultado de esta variable NO sea -1 (ya que ello indicaría
+ * que no hay ninguna 'a'), se devolvería el texto que hay desde la posición
+ * 0 de la String hasta la posición de la primera 'a', de lo contrario, se
+ * indica que no hay ninguna 'a' dentro del texto introducido
+ */
+function clickButton9() {
+    var posicionPrimeraA = contenidoTexto.value.indexOf('a');
+
+    if (posicionPrimeraA != -1) {
+        textoResultado.innerText = contenidoTexto.value.substr(0, posicionPrimeraA);
+    } else {
+        textoResultado.innerText = "No hi ha cap 'a' dins del text introduït";
+    }  
+}
