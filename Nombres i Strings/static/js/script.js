@@ -270,3 +270,32 @@ function clickButton14() {
     }
     textoResultado.innerText = nuevaString;
 }
+
+/**
+ * Al darle click al botón 15, se guarda en una variable el valor del
+ * texto introducido, y se crea una variable con una String Vacía. Se
+ * eliminan los espacios que hay al principio y al final del texto, y
+ * se reemplazan los espacios extra que hay entre las palabras, por un
+ * único espacio. Se recorre la longitud del texto, y si se encuentra un
+ * espacio, se reemplaza por un guión, y se añade a la String vacía, si
+ * no es un espacio, se añade directamentea la String. Se devuelve la
+ * nueva String como resultado
+ */
+function clickButton15() {
+    var contenidoTextoValor = contenidoTexto.value;
+    var nuevaString = '';
+
+    contenidoTextoValor = contenidoTextoValor.trim();
+    contenidoTextoValor = contenidoTextoValor.replace(/ +/g, ' ');
+
+    for (i = 0; i < contenidoTextoValor.length; i++) {
+
+        if (contenidoTextoValor.charAt(i) == ' ') {
+            nuevaString += contenidoTextoValor.charAt(i).replace(' ', '-');
+        } else {
+            nuevaString += contenidoTextoValor.charAt(i);
+        }
+    }
+
+    textoResultado.innerText = nuevaString;
+}
