@@ -299,3 +299,30 @@ function clickButton15() {
 
     textoResultado.innerText = nuevaString;
 }
+
+/** 
+ * Al darle click al botón 16, en un principio hace igual que el anterior
+ * botón, pero añadiendo de antemano la letra en la primera posición del
+ * texto introducido a la nueva String, después recorre el contenido del 
+ * texto, y si encuentra un espacio, añade a la nueva String el carácter 
+ * que hay a continuación. Devuelve el resultado, pasando a mayúsculas
+ * el acrónimo 
+ */
+function clickButton16() {
+    var contenidoTextoValor = contenidoTexto.value;
+    var nuevaString = '';
+
+    contenidoTextoValor = contenidoTextoValor.trim();
+    contenidoTextoValor = contenidoTextoValor.replace(/ +/g, ' ');
+    
+    nuevaString += contenidoTextoValor.charAt(0);
+
+    for (i = 0; i < contenidoTextoValor.length; i++) {
+        if (contenidoTextoValor.charAt(i) == ' ') {
+            nuevaString += contenidoTextoValor.charAt(i + 1);
+        }
+    }
+
+
+    textoResultado.innerText = nuevaString.toUpperCase();
+}
