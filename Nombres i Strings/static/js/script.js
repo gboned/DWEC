@@ -224,3 +224,17 @@ function clickButton11() {
         textoResultado.innerText = "No hi ha cap ocurrència de 'la' dins del text introduït";
     }
 }
+
+/**
+ * Al darle click al botón 12, se hace lo mismo que con el botón 11, excepto
+ * que al reemplazar 'la', se indica que se reemplace por un asterisco.
+ */
+function clickButton12() {
+    var remplazaLaAsterisco = contenidoTexto.value.replace(/la/gi, '*');
+
+    if (contenidoTexto.value.search(/la/gi) != -1) {
+        textoResultado.innerText = remplazaLaAsterisco;
+    } else {
+        textoResultado.innerText = "No hi ha cap ocurrència de 'la' dins del text introduït";
+    }
+}
